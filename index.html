@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Milkman Soundboard</title>
+    <style>
+        body {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            margin-top: 50px;
+        }
+
+        button {
+            width: 300px;
+            height: 100px;
+            font-size: 28px;
+            margin: 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h1>🥛 Milkman Soundboard 🥛</h1>
+
+<button onclick="playSound('freshy')">
+Freshy
+</button>
+
+<button onclick="playSound('carbomb')">
+Car Bomb
+</button>
+
+<audio id="freshy" src="freshy.mp3"></audio>
+<audio id="carbomb" src="carbomb.mp3"></audio>
+
+<script>
+function playSound(id) {
+    let audio = document.getElementById(id);
+    audio.pause();
+    audio.currentTime = 0;
+    audio.play();
+}
+</script>
+
+</body>
+</html>
